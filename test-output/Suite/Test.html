@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Dec 30 10:27:01 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>297 seconds (297290 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='POMFramework.AdminTC.JobCategoriesOpen()'><b>JobCategoriesOpen</b><br>Test class: POMFramework.AdminTC</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;Admin&apos;] (tried for 5 second(s) with 300 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;PRASHANT&apos;, ip: &apos;192.168.31.50&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at KeyWords_BrowserOpen_Logout.UIKeyWords.ExplicitlyWait(UIKeyWords.java:98)
+	at POMPages.AdminPage.AdminTabOpen(AdminPage.java:21)
+	at POMFramework.AdminTC.JobCategoriesOpen(AdminTC.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873788332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873788332'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;Admin&apos;] (tried for 5 second(s) with 300 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;PRASHANT&apos;, ip: &apos;192.168.31.50&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at KeyWords_BrowserOpen_Logout.UIKeyWords.ExplicitlyWait(UIKeyWords.java:98)
+	at POMPages.AdminPage.AdminTabOpen(AdminPage.java:21)
+	at POMFramework.AdminTC.JobCategoriesOpen(AdminTC.java:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='POMFramework.AdminTC.AdminEnterUserManagement()'><b>AdminEnterUserManagement</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>8</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.AdminTabOpen()'><b>AdminTabOpen</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>6</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.EmploymentStatusADD()'><b>EmploymentStatusADD</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>14</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.EmploymentStatusOpen()'><b>EmploymentStatusOpen</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>8</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.JobCategoriesADD()'><b>JobCategoriesADD</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>14</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.JobTitleADD()'><b>JobTitleADD</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>18</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.JobTitleOpen()'><b>JobTitleOpen</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>7</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.LoginPageTC.LoginWithINValidCred()'><b>LoginWithINValidCred</b><br>Test class: POMFramework.LoginPageTC</td>
+<td></td>
+<td>11</td>
+<td>POMFramework.LoginPageTC@768fc0f2</td></tr>
+<tr>
+<td title='POMFramework.LoginPageTC.LoginWithValidCred()'><b>LoginWithValidCred</b><br>Test class: POMFramework.LoginPageTC</td>
+<td></td>
+<td>11</td>
+<td>POMFramework.LoginPageTC@768fc0f2</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.PayGradesAddGrade()'><b>PayGradesAddGrade</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>16</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.PayGradesOpen()'><b>PayGradesOpen</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>7</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.WorkShiftsADD()'><b>WorkShiftsADD</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>15</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+<tr>
+<td title='POMFramework.AdminTC.WorkShiftsOpen()'><b>WorkShiftsOpen</b><br>Test class: POMFramework.AdminTC</td>
+<td></td>
+<td>7</td>
+<td>POMFramework.AdminTC@71329995</td></tr>
+</table><p>
+</body>
+</html>
